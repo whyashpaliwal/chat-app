@@ -1,0 +1,207 @@
+/* style for Single Page Chat Application 
+   Created By: Yash Paliwal
+   Date: 07-02-2020
+   Reviewer: RajjatB  */
+html, body{
+    margin: 0px;
+    padding: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+                    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* header & footer */
+.tsclsHeader, .tsclsFooter{
+    margin: 0px;
+    width: 100%;
+    /* background-color: #0f2b44; #0f2b44*/
+    background-color: #0f2b44;
+    text-align: center;
+    font-weight: 900;
+}
+/* header H1 */
+#tsHeaderH1, .tsFooterP{
+    margin: 0px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    font-weight: lighter;
+}   
+/* chat interface */
+.tsclsContainerDiv{
+    position: static;
+    width: 100%;
+    /* background-color: rgb(255, 246, 232); */
+    background-image: url("img/background.jpg");
+    overflow: auto;
+}
+.tsclsUser{
+    position: relative;
+    width: 90%;
+    float: left;
+    margin: 15px 20px;
+    height: 550px;
+    background-color: rgb(38, 52, 61);
+    background-image: url("img/img.jpg");
+    background-position: center;
+    border: 2px solid black;
+    overflow: auto; 
+}
+/* for responsive design */
+@media only screen and (min-width: 400px){
+    .tsclsContainerDiv{
+        height: 645px;
+    }
+    .tsclsUser{
+        width: 90%;
+        height: 70%;  
+    }
+}
+  /* 786 */
+@media only screen and (min-width: 786px){
+    .tsclsContainerDiv{
+        height: 550px;
+        overflow: hidden;
+    }
+    #tsUser1{
+        margin-left: 50px;
+        }
+    .tsclsUser{
+        width: 44%;
+        height: 90%;  
+    }
+}
+
+/* chat section */
+/* user header container for user details  */
+.tsclsUserHeader{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 0px;
+    background-color: #0f2b44;
+    /* background-color: #1d1d1f; */
+}
+/* profileImage user header div left */
+.tsclsProfileImg{
+    position: absolute;
+    width: 38px;
+    height: 38px; 
+    left: 10px;
+    margin: 2.4px 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 2px solid #dadaff;
+    border-radius: 100%;
+}
+/* user chat header div right */
+.tsclsUserDtl{
+    padding: 10px;
+  }
+/* user name */
+.tsclsUserName{
+    display: inline;    
+    margin: 0 0 0px 70px; 
+    color: aliceblue;
+    font-size: 22px;
+    font-weight: medium;
+}
+/* chat clear btn */
+.tsclsClrChatBtn{
+    position: relative;
+    padding: 2.5px 15px;    
+    float: right;
+    background-image: linear-gradient(-50deg,  rgb(0, 39, 110), rgb(6, 0, 97), #0f2b44);
+    color: white;    
+    font-size: 15px;
+    border: 2px solid #dadaff ;
+    border-radius: 4px;      
+    outline: none;
+    cursor: pointer;  
+}
+/* chat container for both user */
+.tsclsUserChatContainer{
+    position: absolute;
+    top: 15.5%;
+    width: 100%;
+    height: 72%;
+    overflow-y: scroll;
+}
+/* chat area */
+.tsclsUserMsg{
+    position: absolute;
+    bottom: 0px;
+    margin: 3px 7px;
+    width: 95.5%;
+    height: 45px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 12px;
+}
+/* input type */
+.tsclsUserInput{
+    position: relative;
+    width: 80%;
+    height: 70%;
+    margin-top: 4.5px;
+    margin-left: 5px;
+    border: 2px solid white ;
+    border-radius: 20px;
+    padding-left: 10px;
+    background-color: white;
+    color: #122030;
+    font-size: 16px;
+    /* to remove border while typing */
+    outline: none;
+}
+.tsclsUserInput::placeholder{
+    color: #122030;
+    font-style: oblique;
+    font-size: 16px;
+}
+.tsclsUserSendBtn{
+    position: absolute;
+    background-color: white; 
+    background-image: url("img/sendBtn.svg");
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    right: 14px;
+    margin-top: 6px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+  }
+
+  /* css for  runtime*/
+  .tsclsMsgDiv{
+    clear: both;
+    position: relative;
+    bottom: -210px;
+    max-width: 70%;
+    padding: 2px 15px 5px 15px; 
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    word-wrap: break-word;
+    font-weight: medium;
+    font-size: 16px;
+    color: aliceblue;
+  }
+  .tsclsDTStamp{
+    clear: both;
+    color: #714e98;
+    font-size: 10px;
+    bottom: -200px;
+    position: relative;
+    padding: 2px 5px 0px 15px; 
+    margin-bottom: 5px;
+    margin-right: 5px;
+  }
+  .tsclsClearChat{
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 150px;
+
+  }
+  

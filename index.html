@@ -1,0 +1,94 @@
+<!-- Single Page Chat Application 
+     Created By: Yash Paliwal
+     Date: 07-05-2020
+     Reviewer: RajjatB -->
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>ovo ~ By Yash</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!-- header -->
+    <header class="tsclsHeader">
+        <h1 id="tsHeaderH1">oVo</h1>
+    </header>
+    <!-- header ends here -->
+       
+    <!-- chat interface -->
+    <div class="tsclsContainerDiv">
+        <!-- user1 interface -->
+        <div class="tsclsUser" id="tsUser1">
+            <!-- user header container for user details -->
+            <div class="tsclsUserHeader">
+                <!-- profile image-->
+                <div class="tsclsProfileImg" style="background-image: url(img/prfImg1.jpg)"></div>
+                <!-- name and clearbtn -->
+                <div class="tsclsUserDtl">
+                    <!-- userName -->
+                    <p class="tsclsUserName">Berlín</p>
+                    <!-- clearChatBtn -->
+                    <button class="tsclsClrChatBtn" onclick="clearChat('tsUser1ChatArea')">Clear</button>
+                </div>
+            </div>
+            <!-- user header container ends here-->
+
+            <!-- user chat section -->
+            <div class="tsclsUserChatContainer" id="tsUser1ChatArea"></div>
+            <!-- user char section ends here -->
+
+            <!-- user message section -->
+            <div class="tsclsUserMsg">
+                <input class="tsclsUserInput" id="tsUser1Msg" type="text" placeholder="Type Your Messege here.">
+                <button class="tsclsUserSendBtn" id="tsUser1SendBtn" onclick="sendMsg('tsUser1Msg')"></button>
+            </div>
+            <!-- user message section ends here -->
+        </div>
+        <!-- user1 interface ends here -->
+
+        <!-- user2 interface -->
+        <div class="tsclsUser" id="tsUser2" style="float: right;">
+            <!-- user header container for user details -->
+            <div class="tsclsUserHeader">
+                <!-- profile image-->
+                <div class="tsclsProfileImg" style="background-image: url(img/prfImg2.jpg);"></div>
+                <!-- name and clearbtn -->
+                <div class="tsclsUserDtl">
+                    <!-- userName -->
+                    <p class="tsclsUserName">María</p>
+                    <!-- clearChatBtn -->
+                    <button class="tsclsClrChatBtn" onclick="clearChat('tsUser2ChatArea')">Clear</button>
+                </div>
+            </div>
+            <!-- user header container ends here-->
+
+            <!-- user chat section -->
+            <div class="tsclsUserChatContainer" id="tsUser2ChatArea"></div>
+            <!-- user char section ends here -->
+
+            <!-- user message section -->
+            <div class="tsclsUserMsg">
+                <input class="tsclsUserInput" id="tsUser2Msg" type="text" placeholder="Type Your Messege here.">
+                <button class="tsclsUserSendBtn" id="tsUser2SendBtn" onclick="sendMsg('tsUser2Msg')"></button>
+            </div>
+            <!-- user message section ends here -->
+        </div>
+        <!-- user2 interface ends here -->
+    </div>
+    <!-- chat interface ends here -->
+
+    <!-- footer -->
+    <footer class="tsclsFooter">
+        <p class="tsFooterP" id="tsFooterUpdate"></p>
+    </footer>
+    <!-- footer ends here -->
+    <script>
+        var LDateString;
+        LDateString = new Date().toLocaleString();
+        document.getElementById("tsFooterUpdate").innerHTML = "Copyrights @ Yash Paliwal | Latest Update: " + LDateString;
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
